@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="css/style_fh.css" type="text/css" title="alt2" media="screen" />
 <link rel="stylesheet" href="css/style_um.css" type="text/css" title="alt3" media="screen" />
 <link rel="stylesheet" href="css/style_ts.css" type="text/css" title="alt4" media="screen" />
-<link rel="copyright" href="# copyright" title="Copyright" />
+<link rel="copyright" href="#copyright" title="Copyright" />
 
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -34,56 +34,73 @@
 </div>
 </noscript>
 
-<p> <small> change style: <a href="#" onclick="setActiveStyleSheet ('alt1'); return false;" > Original code, <a href="#" onclick="setActiveStyleSheet ('alt2'); return false;" > Frank Helmschrott code, <a href="#" onclick="setActiveStyleSheet ('default'); return false;" > Andreas Isaak code, <a href="#" onclick="setActiveStyleSheet ('alt3'); return false;" > Ulf Mayer code, <a href="#" onclick="setActiveStyleSheet ('alt4'); return false;" > Tim Schenk code </small> </p>
+<p> <small> change style: <a href="#" onclick="setActiveStyleSheet ('alt1'); return false;" > 
+Original code, <a href="#" onclick="setActiveStyleSheet ('alt2'); return false;" >
+   Frank Helmschrott code, <a href="#" onclick="setActiveStyleSheet ('default'); return false;" > 
+   Andreas Isaak code, <a href="#" onclick="setActiveStyleSheet ('alt3'); return false;" >
+      Ulf Mayer code, <a href="#" onclick="setActiveStyleSheet ('alt4'); return false;" > 
+      Tim Schenk code </small> </p>
 <div id="input">
   <form action="" onreset="doreset();">
 <fieldset> <legend> vCard </legend>
 <dl>
 <dt> <label for="adrType"> Type </label> </dt>
-<dd> <input class="input" type="text" id="adrType" value="dom home postal parcel" /> <br /> (work, home, dom, postal, parcel) </dd>
-<dt> <label for="vtitle"> titel </label> </dt>
-<dd> <input class="input" type="text" id="vtitle" value="" /> </dd>
+<dd> <input class="input" type="text" id="adrType" value="home, p.o.box, etc" /> <br /> (work, home, dom, postal, parcel) </dd>
+<dt> <label for="vtitle"> title/honorific-prefix</label> </dt>
+<dd> <input class="input" type="text" id="vtitle" value="mr" /> </dd>
+<!--
+honorific-suffix
+nickname
+logo
+category
+po box
+label
+url
+uid
+note
+key
+sex
+tz-->
 <!-- <dt> <label for="VFN"> Full Name </label> </dt>
 <dd> <input class="input" type="text" id="vfn" value="Vorname Nachname " /> </dd> -->
 
 <dt> <label for="vgiven_name"> First Name </label> </dt>
-<dd> <input class="input" type="text" id="vgiven_name" value="Vorname" alt="First [Given] Name" /> </dd>
+<dd> <input class="input" type="text" id="vgiven_name" value="first name" alt="First [Given] Name" /> </dd>
 <dt> <label for="vadditional_name"> Middle Name </label> </dt>
-<dd> <input class="input" type="text" id="vadditional_name" value="zweiter Vorname" alt="middle name" /> </dd>
+<dd> <input class="input" type="text" id="vadditional_name" value="middle name" alt="middle name" /> </dd>
 <dt> <label for="vfamily_name"> Last Name </label> </dt>
 <dd> <input class="input" type="text" id="vfamily_name" value="Last Name" /> </dd>
-
 <dt> <label for="vsortstring"> sort-string </label> </dt>
 <dd> <input class="input" type="text" id="vsortstring" value="Last Name" /> </dd>
-<dt> <label for="bday"> bday </label> </dt>
+<dt> <label for="bday"> D.O.B. </label> </dt>
 <dd> <input class="input" type="text" id="bday" value="1993-01-02T09: 30: 00" /> <br /> <a href="http: //en. wikipedia.org/wiki/Iso_date">ISO Date code </dd>
 <dt> <label for="vorg"> org </label> </dt>
-<dd> <input class="input" type="text" id="vorg" value="" /> </dd>
-<dt> <label for="vrole"> role </label> </dt>
-<dd> <input class="input" type="text" id="vrole" value="" /> </dd>
-<dt> <label for="street"> street-address </label> </dt>
-<dd> <input class="input" type="text" id="street" /> </dd>
+<dd> <input class="input" type="text" id="vorg" value="org name" /> </dd>
+<dt> <label for="vrole"> role/title </label> </dt>
+<dd> <input class="input" type="text" id="vrole" value="role in org" /> </dd>
+<dt> <label for="street"> street address </label> </dt>
+<dd> <input class="input" type="text" id="street" value="address" /> </dd>
 <dt> <label for="extendedaddress"> extendedaddress </label> </dt>
 <dd> <input class="input" type="text" id="extended-addresses" /> </dd>
+<dt> <label for="city"> city </label> </dt>
+<dd> <input class="input" type="text" id="city" value="city"/> </dd>
+<dt> <label for="state"> state </label> </dt>
+<dd> <input class="input" type="text" id="state" value="state" /> </dd>
 <dt> <label for="zip"> Postal Code </label> </dt>
-<dd> <input class="input" type="text" id="zip" /> </dd>
-<dt> <label for="city"> locality </label> </dt>
-<dd> <input class="input" type="text" id="city" /> </dd>
-<dt> <label for="state"> region </label> </dt>
-<dd> <input class="input" type="text" id="state" /> </dd>
+<dd> <input class="input" type="text" id="zip" value="zip" /> </dd>
 <dt> <label for="countryname"> country-Name </label> </dt>
-<dd> <input class="input" type="text" id="countryname" /> </dd>
+<dd> <input class="input" type="text" id="countryname" value="country"/> </dd>
 <dt> <label for="phone"> phone </label> </dt>
-<dd> <input class="input" type="text" id="phone" /> </dd>
+<dd> <input class="input" type="text" id="phone" value="phone" /> </dd>
 <dt> <label for="vnote"> note (fax) </label> </dt>
-<dd> <input class="input" type="text" id="vnote" value="" /> </dd>
+<dd> <input class="input" type="text" id="vnote" value="fax" /> </dd>
 <dt> <label for="vurl"> url </label> </dt>
-<dd> <input class="input" type="text" id="vurl" /> </dd>
+<dd> <input class="input" type="text" id="vurl" value="www" /> </dd>
 <dt> <label for="photo"> photo url </label> </dt>
-<dd> <input class="input" type="text" id="photo" /> </dd>
+<dd> <input class="input" type="text" id="photo" value="image" /> </dd>
 </dl>
 </fieldset>
-<fieldset> <legend> geo (& amp;) </legend>
+<fieldset> <legend> geo (&amp;) </legend>
 <dl>
 <dt> <label for="latitude"> Latitude </label> </dt>
 <dd> <input class="input" type="text" id="latitude" /> </dd>
@@ -91,10 +108,10 @@
 <dd> <input class="input" type="text" id="Longitude" /> </dd>
 </dl>
 </fieldset>
-<fieldset> <legend> email (& amp;) </legend>
+<fieldset> <legend> email (&amp;) </legend>
 <dl>
 <dt> <label for="emailtype"> Type </label> </dt>
-<dd> <input class="input" type="text" id="emailtype" /> <br /> (email, Internet pref) </dd>
+<dd> <input class="input" type="text" id="emailtype" /> <br /> (email, Internet preference) </dd>
 <dt> <label for="emailvalue"> value </label> </dt>
 <dd> <input class="input" type="text" id="emailvalue" /> </dd>
 <dt> <label for="agent"> Agent </label> </dt>
@@ -104,8 +121,8 @@
 </dl>
 </fieldset>
 <dl>
-<dt> & nbsp; </dt>
-<dd> <input type="reset" /> <button onclick="codeit (); return false;"> Create </button> </dd>!
+<dt> &nbsp; </dt>
+<dd> <input type="reset" /> <button onclick="codeit(); return false;"> Create </button> </dd>!
 </dl>
 </form>
 </div>
@@ -125,12 +142,12 @@
 <div id="footer">
   
 <p>translation and adaptation 2015 <a href="//rayanthony.io">ray anthony</a></p>
-<p> based on v1.0 of <a href="http://photomatt.net"> Matt Mullenweg <p>
-  <p>v1.1 of <a href="http: //tantek.com "lang =" tr "> Tantek </a></p>
+<p> based on v1.0 of <a href="http://photomatt.net"> Matt Mullenweg code<p>
+  <p>v1.1 of <a href="http: //tantek.com "lang =" tr "> Tantek's code </a></p>
   <p>and created sample code live preview for navigation using microformats, in this case hCard/vCard </p>.
-<p id="copyright"> Copyright & copy; 2006 - 2012 Frank Bueltge - <a href="http://bueltge.de"> bueltge.de code, <a rel="license" href="http://creativecommons.org/licenses/by- nc-sa/2.0/"> Creative Commons code. </p>
-<p> F navigation use r this page ran a <a href="http://bueltge.de/verlosung-die-2-buch-web-20/325"> small lottery code and it gingt about a create stylesheet. Reprofiling Styles are integrated by a style switcher, below the main navigation heading. So far, this code with Styles by <a href="http://blog.helmschrott.de/"> Frank Helmschrott, <a href="http://www.jared2.de/"> Andreas Isaak </a>, <a href="http://www.lepomm.de/"> Tim Schenk code and <a href="http://www.ulfmayer.de "> Ulf Mayer code sent . <br /> The competition has ended, new styles I'll still like to. </p>
-<p> The project can be found at <a href="https://github.com/bueltge/hCard-vCard-Generator" title="contribute, Fork me on Github github"> code and can therefore at any time be changed </p>; and improved ver GIRL.
+<p id="copyright"> Copyright & copy; 2006 - 2012 Frank Bueltge - <a href="http://bueltge.de"> bueltge.de code,<a rel="license" href="http://creativecommons.org/licenses/by- nc-sa/2.0/"> Creative Commons code. 
+ F navigation use r this page ran a <a href="http://bueltge.de/verlosung-die-2-buch-web-20/325"> small lottery code and it gingt about a create stylesheet. Reprofiling Styles are integrated by a style switcher, below the main navigation heading. So far, this code with Styles by <a href="http://blog.helmschrott.de/"> Frank Helmschrott, <a href="http://www.jared2.de/"> Andreas Isaak </a>, <a href="http://www.lepomm.de/"> Tim Schenk code and <a href="http://www.ulfmayer.de "> Ulf Mayer code sent . <br /> The competition has ended, new styles I'll still like to. 
+ The project can be found at <a href="https://github.com/bueltge/hCard-vCard-Generator" title="contribute, Fork me on Github github"> code and can therefore at any time be changed ; and improved ver GIRL.</p>
 </div>
 
 <script type="text/javascript" src="js/styleswitcher.js"> </script>
